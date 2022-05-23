@@ -1,31 +1,33 @@
 "use strict"
 
-let a = prompt('enter a');
+let a = 5;
 
-let b = prompt('enter b');
+let b = 4;
 
-let c = prompt('enter c');
+let c = 3;
 
 const X = 2;
 
-const D = b**X - 4*a*c;
+let D = b**X - 4*a*c;
 
-if (D === 0) {
+console.log('D = ${D}');
 
-let x = (-b +Math. sqrt(D) )/2*a;
+if (D < 0) {
 
-alert(x);
+    console.log('no results');
 
-} else if (D > 0) {
+}
 
-let x1 = (-b + Math.sqrt(D) ) /2*a;
+else if (D === 0) {
 
-let x2 = (-b - Math.sqrt(D) ) /2*a;
+let x = -b / (2*a);
 
-alert(x1);
+console.log('root repeats and equal to ${x}');
 
-alert(x2);
+esle {
+    let x1 = (-b + D ** 1) / (2*a);
+    let x2 = (-b - D ** 1) / (2*a);
 
-} else {
-    alert('no answer')
-};
+    console.log('roots equal to: x1 = ${x1}, x2 = ${x2}');
+
+}
